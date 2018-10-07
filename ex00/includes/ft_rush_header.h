@@ -6,7 +6,7 @@
 /*   By: eurras-i <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/07 04:18:14 by eurras-i          #+#    #+#             */
-/*   Updated: 2018/10/07 12:48:32 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 23:24:40 by eurras-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # define BUFFER_SIZE 1000
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct	s_rush_info
 {
@@ -33,5 +32,6 @@ int				ft_strcmp(char *str1, char *str2);
 char			*generate_rush_output(t_rush_info rush_info);
 char			*parse_console_output();
 char			*terminate_symbol(char c);
+void			check_for_valid_rush(t_rush_info ri);
 
 #endif

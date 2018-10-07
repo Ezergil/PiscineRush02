@@ -6,7 +6,7 @@
 /*   By: idurgan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 12:46:23 by idurgan           #+#    #+#             */
-/*   Updated: 2018/10/07 19:38:30 by jlucas-l         ###   ########.fr       */
+/*   Updated: 2018/10/07 23:03:10 by eurras-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,18 @@ char	*generate_line(int x, char left, char mid, char right)
 char	*rush0x(int x, int y, char *symbols)
 {
 	int		a;
-	char	*top;
-	char	*bottom;
 	char	*result;
 
 	a = 0;
 	if ((x <= 0) || (y <= 0))
 		return (NULL);
 	result = "";
-	result = ft_strcat(result, generate_line(x, symbols[0], symbols[1], symbols[2]));
+	result = ft_strcat(result, generate_line(x, symbols[0], symbols[1],
+				symbols[2]));
 	while (y > 2)
 	{
-		result = ft_strcat(result, generate_line(x, symbols[3], ' ', symbols[4]));
+		result = ft_strcat(result, generate_line(x, symbols[3], ' ',
+					symbols[4]));
 		y--;
 	}
 	if (y > 1)

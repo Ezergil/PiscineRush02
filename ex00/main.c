@@ -6,7 +6,7 @@
 /*   By: idurgan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 16:09:15 by idurgan           #+#    #+#             */
-/*   Updated: 2018/10/07 19:10:39 by jlucas-l         ###   ########.fr       */
+/*   Updated: 2018/10/07 23:25:18 by eurras-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,14 @@ char	*parse_console_output(void)
 {
 	char	buff[BUFFER_SIZE];
 	int		cond;
+	int		has_input;
 	char	*result;
 
 	result = "";
 	cond = 0;
 	while ((cond = read(0, buff, BUFFER_SIZE)))
 	{
+		has_input = 1;
 		result = ft_strcat(result, buff);
 	}
 	return (result);
@@ -63,12 +65,16 @@ int		main(void)
 
 	success_count = 0;
 	parsed_output = "";
-	t.rush_number = 3;
 	parsed_output = parse_console_output();
+	if (!parsed_output)
+	{
+		ft_putstr("aucune\n");
+		return (0);
+	}
 	t.rush_string = parsed_output;
 	t.rows_count = count_rows(t.rush_string);
 	t.columns_count = count_columns(t.rush_string);
-	if(ft_strcmp(parsed_output, generate_rush_output(t) == 0)
-	printf("%d", ft_strcmp(parsed_output, generate_rush_output(t)));
+	check_for_valid_rush(t);
+	ft_putchar('\n');
 	return (0);
 }
