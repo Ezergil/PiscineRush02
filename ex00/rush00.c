@@ -6,7 +6,7 @@
 /*   By: idurgan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 12:46:23 by idurgan           #+#    #+#             */
-/*   Updated: 2018/10/07 09:40:16 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 12:49:24 by eurras-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,5 @@ char	*generate_rush_output(t_rush_info rush_info)
 		symbols = "ABCBBCBA";
 	result = rush0x(rush_info.columns_count, rush_info.rows_count,
 				symbols);
-	fflush(stdout);
 	return (result);
 }

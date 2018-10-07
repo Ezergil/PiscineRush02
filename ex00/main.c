@@ -6,7 +6,7 @@
 /*   By: idurgan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 16:09:15 by idurgan           #+#    #+#             */
-/*   Updated: 2018/10/07 11:01:05 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 11:12:03 by eurras-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,16 @@ int		main(void)
 {
 	t_rush_info	t;
 	char		*parsed_output;
+	int			success_count;
 
+	success_count = 0;
 	parsed_output = "";
 	t.rush_number = 3;
 	parsed_output = parse_console_output();
 	t.rush_string = parsed_output;
 	t.rows_count = count_rows(t.rush_string);
 	t.columns_count = count_columns(t.rush_string);
+	if(ft_strcmp(parsed_output, generate_rush_output(t) == 0)
 	printf("%d", ft_strcmp(parsed_output, generate_rush_output(t)));
 	return (0);
 }

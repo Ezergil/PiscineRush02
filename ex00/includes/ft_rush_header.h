@@ -6,7 +6,7 @@
 /*   By: eurras-i <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/07 04:18:14 by eurras-i          #+#    #+#             */
-/*   Updated: 2018/10/07 09:45:00 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 12:48:32 by eurras-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ char			*ft_strcat(char *str1, char *str2);
 int				ft_strcmp(char *str1, char *str2);
 char			*generate_rush_output(t_rush_info rush_info);
 char			*parse_console_output();
+char			*terminate_symbol(char c);
 
 #endif
