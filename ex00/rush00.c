@@ -6,7 +6,7 @@
 /*   By: idurgan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 12:46:23 by idurgan           #+#    #+#             */
-/*   Updated: 2018/10/07 09:40:16 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 19:38:30 by jlucas-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*terminate_symbol(char c)
 {
 	char	*res;
+
 	res = malloc(2);
 	res[0] = c;
 	res[1] = '\0';
@@ -26,7 +27,6 @@ char	*generate_line(int x, char left, char mid, char right)
 	int		i;
 	char	*res;
 	char	nl;
-
 
 	res = "";
 	nl = '\n';
@@ -61,7 +61,8 @@ char	*rush0x(int x, int y, char *symbols)
 		y--;
 	}
 	if (y > 1)
-		result = ft_strcat(result, generate_line(x, symbols[5], symbols[6], symbols[7]));
+		result = ft_strcat(result,
+				generate_line(x, symbols[5], symbols[6], symbols[7]));
 	return (result);
 }
 

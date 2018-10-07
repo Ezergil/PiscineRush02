@@ -6,7 +6,7 @@
 /*   By: idurgan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 16:09:15 by idurgan           #+#    #+#             */
-/*   Updated: 2018/10/07 11:01:05 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 19:10:39 by jlucas-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		count_columns(char *rush_string)
 	return (i);
 }
 
-char	*parse_console_output()
+char	*parse_console_output(void)
 {
 	char	buff[BUFFER_SIZE];
 	int		cond;

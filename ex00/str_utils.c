@@ -6,7 +6,7 @@
 /*   By: eurras-i <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/07 05:12:29 by eurras-i          #+#    #+#             */
-/*   Updated: 2018/10/07 09:07:33 by eurras-i         ###   ########.fr       */
+/*   Updated: 2018/10/07 19:12:35 by jlucas-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,9 @@ int		ft_strlen(char *str1)
 	return (i);
 }
 
-
 char	*ft_strcat(char *str1, char *str2)
 {
-	char*			result;
+	char			*result;
 	int				len1;
 	int				len2;
 	unsigned int	i;
@@ -68,7 +67,7 @@ char	*ft_strcat(char *str1, char *str2)
 	i = 0;
 	len1 = ft_strlen(str1);
 	len2 = ft_strlen(str2);
-	result = malloc(len1 + len2 +1);
+	result = malloc(len1 + len2 + 1);
 	while (str1[i])
 	{
 		result[i] = str1[i];
